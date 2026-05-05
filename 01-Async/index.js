@@ -38,7 +38,6 @@ orderFood
   .finally(() => console.log(".finally → Thanks for visiting!")); */
 
 //Async and Await
-// Fake API call — returns a promise after 1 second
 const getUser = (id) => new Promise((resolve) =>
   setTimeout(() => resolve({ id, name: "Ritika", age: 22 }), 1000)
 );
@@ -46,7 +45,7 @@ const getUser = (id) => new Promise((resolve) =>
 // async/await — cleaner way to write promises
 const showUser = async () => {
   console.log("Fetching user...");
-  const user = await getUser(1); // waits here
+  const user = await getUser(1); // await is required to get the actual data
   console.log("Got user →", user);
 };
 
